@@ -25,7 +25,7 @@ let enemy2Ready = false;
 assets.enemy2.onload = () => enemy2Ready = true;
 
 const game = {
-  gold: 180,
+  gold: 120,
   wave: 1,
   towerHP: 100,
   towerHPMax: 100,
@@ -388,7 +388,7 @@ function spawnWave(){
         
         let isBreaker = false;
         if (game.wave > 3){ 
-          isBreaker = Math.random() < 0.1; 
+          isBreaker = Math.random() < 0.2; 
         }
 
         
@@ -398,8 +398,8 @@ function spawnWave(){
         if (!path) continue;
 
         const pos = cellToPx(sx,sy);
-        const hp = isBreaker ? 40 + Math.floor(game.wave*5) : 18 + Math.floor(game.wave*3);
-        const spd = isBreaker ? 0.5 + game.wave*0.03 : 1.0 + game.wave*0.15;
+        const hp = isBreaker ? 40 + Math.floor(game.wave*8) : 18 + Math.floor(game.wave*4);
+        const spd = isBreaker ? 0.5 + game.wave*0.08 : 1.0 + game.wave*0.25;
 
         game.enemies.push({ 
           gx: sx, gy: sy, x: pos.x, y: pos.y, path, idx:0, 
