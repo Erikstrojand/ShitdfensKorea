@@ -1,0 +1,40 @@
+:root {  
+  --bg:#0b0f14; --panel:#121923; --panel2:#0f151d; --text:#e6eef7; --muted:#9fb3c8;  
+  --accent:#4da3ff; --good:#7ee787; --warn:#f5c542; --bad:#ff5c5c; --gold:#f5c542;  
+  --r:16px;  
+}  
+  
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}  
+html,body{height:100%}  
+body{margin:0;background:radial-gradient(1100px 700px at 70% 15%,#0f1722 0%,var(--bg) 60%);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,sans-serif}  
+  
+.wrap{display:grid;grid-template-rows:auto 1fr auto;min-height:100dvh;gap:10px;padding:10px}  
+.hud{display:flex;justify-content:space-between;align-items:center;gap:8px;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:8px 10px;flex-wrap:wrap}  
+.hud-left,.hud-right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}  
+.badge{font-weight:800;color:var(--accent)}  
+.pill{background:#0d1522;border:1px solid rgba(255,255,255,.08);padding:8px 10px;border-radius:12px}  
+.pill-btn{background:#0d1522;border:1px solid rgba(255,255,255,.08);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700}  
+.pill-btn.active{outline:2px solid var(--accent)}  
+.pill-btn:active{transform:translateY(1px)}  
+
+.game-area{position:relative;background:radial-gradient(1200px 900px at 50% 40%,#0c141e 0%,#0a0f16 60%);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden}  
+#game{display:block;width:100%;height:100%;background:  
+  repeating-linear-gradient(0deg,#0b121a,#0b121a 31px,#0c131c 32px),  
+  repeating-linear-gradient(90deg,#0b121a,#0b121a 31px,#0c131c 32px)}  
+
+#toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(12,18,26,.92);border:1px solid rgba(255,255,255,.1);padding:8px 12px;border-radius:12px;pointer-events:none;opacity:0;font-weight:800;transition:opacity .2s,transform .2s}  
+
+.bar{display:flex;gap:8px;align-items:center;justify-content:space-between;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:8px 10px;flex-wrap:wrap}  
+.bar .slot{display:flex;gap:8px;align-items:center}  
+#btn-repair{background:#0d1522;border:1px solid rgba(255,255,255,.08);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700}  
+.hint{color:var(--muted);font-size:12px}  
+
+/* Upgrade button */
+#upgrade-panel{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.upgrade-btn{background:#0d1522;border:1px solid rgba(255,255,255,.08);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:700;cursor:pointer}
+.upgrade-btn:active{transform:translateY(1px)}
+
+@media (orientation:portrait){  
+  .hud-right{width:100%}  
+  .wrap{gap:4px;padding:8px}  
+}

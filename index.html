@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>준호 살리기</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hud">
+      <div class="hud-left">
+        <div class="badge">준호 살리기</div>
+        <div class="pill">레벨<span id="wave">1</span></div>
+        <div class="pill">골드(g): <span id="gold">100</span></div>
+        <div class="pill">HP <span id="hp">100</span></div>
+        <div class="pill" id="phase">BUILD</div>
+        <div class="pill" id="timer">:15</div>
+        <div id="skipBuildBtn" class="pill" style="color: violet;">건설 건너뛰기</div>
+      </div>
+      <div class="hud-right">
+        <button class="pill-btn" data-item="barrier" data-cost="20" style="background:#23534a; color:#fff">벽돌 20g</button>
+        <button class="pill-btn" data-item="turret" data-cost="50" style="background:#23534a; color:#fff">포탑 50g</button>
+        <button class="pill-btn" data-item="sell" data-cost="0" style="background:#23534a; color:#fff">팔아버리기</button>
+      </div>
+    </header>
+
+    <main class="game-area">
+      <canvas id="game"></canvas>
+      <div id="toast"></div>
+    </main>
+
+    <footer class="bar">
+      <div class="slot">
+        <button id="btn-repair" style="background:#23534a; color:#fff">회복 +10HP (30g)</button>
+      </div>
+      <div class="slot hint">칸을 선택하여 설치하기</div>
+    </footer>
+
+    <!-- Upgrade panel -->
+    <div id="upgrade-panel" class="bar">
+      <div class="slot">
+        <button class="upgrade-btn" data-upgrade="damage" data-cost="30" style="background:#23534a; color:#fff">데미지(D) 30g</button>
+        <button class="upgrade-btn" data-upgrade="range" data-cost="25" style="background:#23534a; color:#fff">사정거리(R) 25g</button>
+        <button class="upgrade-btn" data-upgrade="speed" data-cost="20" style="background:#23534a; color:#fff">속도(S) 20g</button>
+      </div>
+      <div class="slot hint">포탑 선택 후 업그레이드</div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
