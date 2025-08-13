@@ -281,7 +281,7 @@ function tryPlace(gx,gy){
       toast("준호로 가는 경로가 없을 수는 없습니다.");
       return;
     }
-    const cost = 20;
+    const cost = 15;
     if (game.gold < cost){ game.barriers.delete(key(gx,gy)); toast("Not enough gold"); return; }
     game.gold -= cost;
     game.pathDirty = true;
