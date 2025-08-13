@@ -702,7 +702,7 @@ function drawTower(){
 game.barrierHP = new Map(); 
 
 function placeBarrier(gx,gy){
-  const cost = 20;
+  const cost = 15;
   if (game.gold < cost){ toast("골드 부족!"); return false; }
   game.gold -= cost;
   game.barriers.add(key(gx,gy));
